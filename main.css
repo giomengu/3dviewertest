@@ -43,13 +43,13 @@ body, html {
         transform: translate(0px);
     }
     to {
-        transform: translate(-400px);
+        transform: translate(-100%);
     }
 }
 
 @keyframes slideIn {
     from {
-        transform: translate(-400px);
+        transform: translate(-100%);
     }
     to {
         transform: translate(0px);
