@@ -3,6 +3,8 @@ body, html {
     padding: 0;
     overscroll-behavior: none;
     overflow: hidden;
+    font-family: 'Karla', sans-serif;
+    
 }
 
 /* Styles for the loading spinner container */
@@ -18,11 +20,11 @@ body, html {
 
 /* Styles for the loading spinner itself */
 #loading-spinner {
-    border: 4px solid #f3f3f3; /* Light grey border */
-    border-top: 4px solid #3498db; /* Blue color for the spinning part */
+    border: 6px solid #f3f3f3; /* Light grey border */
+    border-top: 6px solid #baad84; /* Blue color for the spinning part */
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     animation: spin 2s linear infinite;
 }
 
@@ -36,3 +38,122 @@ body, html {
     }
 }
 
+@keyframes slideOut {
+    from {
+        transform: translate(0px);
+    }
+    to {
+        transform: translate(-400px);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translate(-400px);
+    }
+    to {
+        transform: translate(0px);
+    }
+}
+
+.sidebar {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Aligns children vertically in the center */
+    align-items: center; /* Centers children horizontally */
+    width: 20%; /* Adjust as needed */
+    height: 100vh; /* Adjust height to viewport */
+    background-color: #ffffff0a; /* Adjust color as needed */
+    z-index: 1000; /* To ensure it stays above other content */
+}
+
+.sidebarbutton {
+    position: fixed;
+    display: flex;
+    left:20%;
+    flex-direction: column;
+    justify-content: center; /* Aligns children vertically in the center */
+    align-items: center; /* Centers children horizontally */
+    height: 100vh; /* Adjust height to viewport */
+    background-color: #ffffff0a; /* Adjust color as needed */
+    z-index: 1000; /* To ensure it stays above other content */
+}
+
+.logo {
+    width: 80%; /* Adjust as needed */
+    margin-bottom: 10px;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    background-color: rgb(22, 22, 22); /* Set table background color */
+    border-radius: 10px; /* Rounded corners for the table */
+    overflow: hidden; /* Ensures the rounded corners are visible */
+    box-shadow: 0 0 10px rgba(43, 43, 43, 0.5); /* Optional: Adds shadow for depth */
+    margin-bottom: 20px; /* Space below the table */
+    color: #baad84; /* Set text color to white */
+    font-weight: lighter;
+}
+
+table, th, td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: left;
+}
+
+
+table th[colspan="3"] {
+    text-align: center;
+    color: white;
+    padding: 10px;
+    font-size: 1.2em;
+    
+}
+
+.sidebar.slide-out {
+    animation: slideIn 2s forwards; /* 10-second animation to hide */
+}
+
+.sidebar.slide-in {
+    animation: slideOut 2s forwards; /* 10-second animation to show */
+}
+
+.sidebarbutton.slide-out {
+    left: 20%;
+}
+
+.sidebarbutton.slide-in {
+    left: 0px; /* 10-second animation to hide */
+    
+}
+
+.chevron {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    color: #baad84;
+}
+
+.chevron:before, .chevron:after {
+    /* existing styles... */
+    transform: translate(-50%, -50%) rotate(-45deg); /* Chevron pointing right */
+}
+
+.chevron.open:before, .chevron.open:after {
+    transform: translate(-50%, -50%) rotate(135deg); /* Chevron pointing left */
+}
+
+#toggleButton i {
+    /* Rotate icon for open state */
+    transition: transform 0.3s ease;
+    font-size: 30px;
+}
+
+#toggleButton.open i {
+    transform: rotate(180deg); /* Adjust rotation for desired direction */
+}
