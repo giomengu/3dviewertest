@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <title>NERO 43</title>
     <meta charset="utf-8">
@@ -9,21 +10,22 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="ALPHA LYRAE DESIGN">
     <meta property="og:description" content="ALPHA LYRAE DESIGN VISUALIZER">
-    <meta property="og:image" content="../static/favicon/android-chrome-512x512.png">
+    <meta property="og:image" content="assets/images/fb5e7ed993f9fc96.png">
     <meta name="author" content="G. Mengucci">
     <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="180x180" href="../static/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../static/favicon/favicon-16x16.png">
-    <link rel="manifest" href="../static/favicon/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/a07ba4f556b1aa54.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/b169d59b59a9186e.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/5eef004aea5d2256.png">
+    <link rel="manifest" href="d02d2788237e48b1.webmanifest">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
+    <script defer="defer" src="bundle.0ed159d38a91dbb7.js"></script>
+    <link href="main.css" rel="stylesheet">
 </head>
 
 <body>
-    <div class="sidebar">
-        <img src="assets/images/4e03e1ddc0fe8447.svg" alt="Logo" class="logo">
+    <div class="sidebar"><img src="assets/images/4e03e1ddc0fe8447.svg" alt="Logo" class="logo">
         <table>
             <tr>
                 <th colspan="3">NERO 43</th>
@@ -87,34 +89,12 @@
             <!-- Add more rows here if needed -->
         </table>
     </div>
-    <div class="sidebarbutton slide-in">
-        <button id="toggleButton" class="chevron"><i class="fas fa-chevron-right"></i></button>
-    </div>
+    <div class="sidebarbutton slide-in"><button id="toggleButton" class="chevron"><i
+                class="fas fa-chevron-right"></i></button></div>
     <div id="loading-spinner-container">
-        <div id="loading-spinner">
-        </div>
+        <div id="loading-spinner"></div>
     </div>
-    <!-- JavaScript to Toggle the Sidebar -->
-    <script>
-        document.getElementById('toggleButton').addEventListener('click', function() {
-            var sidebar = document.querySelector('.sidebar');
-            var buttonPanel = document.querySelector('.sidebarbutton');
-            if (sidebar.classList.contains('slide-out')) {
-                sidebar.classList.remove('slide-out');
-                sidebar.classList.add('slide-in');
-                buttonPanel.classList.remove('slide-out');
-                buttonPanel.classList.add('slide-in');
-                this.classList.toggle('open', false);
-            } else {
-                sidebar.classList.remove('slide-in');
-                sidebar.classList.add('slide-out');
-                buttonPanel.classList.remove('slide-in');
-                buttonPanel.classList.add('slide-out');
-                this.classList.toggle('open', true);
-
-            }
-        });
-    </script>
+    <script>document.getElementById("toggleButton").addEventListener("click", (function () { var s = document.querySelector(".sidebar"), e = document.querySelector(".sidebarbutton"); s.classList.contains("slide-out") ? (s.classList.remove("slide-out"), s.classList.add("slide-in"), e.classList.remove("slide-out"), e.classList.add("slide-in"), this.classList.toggle("open", !1)) : (s.classList.remove("slide-in"), s.classList.add("slide-out"), e.classList.remove("slide-in"), e.classList.add("slide-out"), this.classList.toggle("open", !0)) }))</script>
 </body>
 
 </html>
