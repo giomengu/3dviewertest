@@ -67,18 +67,22 @@ body, html {
     height: 100vh; /* Adjust height to viewport */
     background-color: #ffffff0a; /* Adjust color as needed */
     z-index: 1000; /* To ensure it stays above other content */
+    backdrop-filter: blur(10px); /* Blur effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
 }
+
 
 .sidebarbutton {
     position: fixed;
     display: flex;
-    left:20%;
+    left:0;
     flex-direction: column;
     justify-content: center; /* Aligns children vertically in the center */
     align-items: center; /* Centers children horizontally */
     height: 100vh; /* Adjust height to viewport */
     background-color: #ffffff0a; /* Adjust color as needed */
     z-index: 1000; /* To ensure it stays above other content */
+    
 }
 
 .logo {
@@ -130,6 +134,7 @@ tbody tr:hover {
     background: #333; /* Hover effect */
 }
 
+
 .sidebar.slide-out {
     animation: slideIn 2s forwards; /* 10-second animation to hide */
 }
@@ -176,6 +181,49 @@ tbody tr:hover {
     transform: rotate(180deg); /* Adjust rotation for desired direction */
 }
 
+#material-selector-container {
+    position: absolute;
+    bottom: 10px;    /* Adjust as needed */
+    right: 10px;   /* Adjust as needed */
+    z-index: 100; /* Ensure it's on top of the canvas */
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    align-items: stretch; 
+    color: rgb(155, 155, 155); /* Text color */
+}
+
+
+.material-select-row span {
+    margin-right: 10px;
+    
+}
+
+.material-select-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.circle-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.material-color-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-left: 5px; /* Add space between circles */
+    cursor: pointer;
+}
+
 @media (max-width: 1400px) {
     .sidebar {
         width: 90%;
@@ -186,5 +234,8 @@ tbody tr:hover {
     }
     .sidebarbutton {
         width: 10%;
+    }
+    #material-selector-container {
+        left: 11%;
     }
 }
