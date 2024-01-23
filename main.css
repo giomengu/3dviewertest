@@ -158,3 +158,16 @@ table th[colspan="3"] {
 #toggleButton.open i {
     transform: rotate(180deg); /* Adjust rotation for desired direction */
 }
+
+@media (max-width: 1400px) {
+    .sidebar {
+        width: 90%;
+        /* You may want to add additional styles for the smaller screen, like changing the font size or padding */
+    }
+    .sidebarbutton.slide-out {
+        left: 90%;
+    }
+    .sidebarbutton {
+        width: 10%;
+    }
+}
