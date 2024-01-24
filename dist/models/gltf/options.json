@@ -1,0 +1,86 @@
+[
+    {
+        "meshName": "NERO40-RENDER_2",
+        "displayName" : "Hull Color",
+        "materials": [
+            {
+                "name": "Blue",
+                "color": "#105D85",
+                "roughness": 0.5,
+                "metalness": 0.3
+            },
+            {
+                "name": "Gray",
+                "color": "#B3B5B7",
+                "roughness": 0.5,
+                "metalness": 0.3
+            },
+            {
+                "name": "Light",
+                "color": "#D0FFFF",
+                "roughness": 0.5,
+                "metalness": 0.3
+            },
+            {
+                "name": "Red",
+                "color": "#8B0000",
+                "roughness": 0.5,
+                "metalness": 0.3
+            },
+            {
+                "name": "Black",
+                "color": "#0a0a0a",
+                "roughness": 0.5,
+                "metalness": 0.3
+            },
+            {
+                "name": "Brown",
+                "color": "#5b4f46",
+                "roughness": 0.5,
+                "metalness": 0.3
+            },
+            {
+                "name": "Green",
+                "color": "#28605c",
+                "roughness": 0.5,
+                "metalness": 0.3
+            },
+            {
+                "name": "Gold",
+                "color": "#947354",
+                "roughness": 0.5,
+                "metalness": 0.3
+            },
+            {
+                "name": "Yellow",
+                "color": "#de9840",
+                "roughness": 0.5,
+                "metalness": 0.3
+            }
+        ]
+    },
+    {
+        "meshName": "NERO40-RENDER_6",
+        "displayName" : "Cushions",
+        "materials": [
+            {
+                "name": "Light",
+                "color": "#D1C4BE",
+                "roughness": 0.6,
+                "metalness": 0
+            },
+            {
+                "name": "Leather",
+                "color": "#5b4f46",
+                "roughness": 0.6,
+                "metalness": 0
+            },
+            {
+                "name": "Light Green",
+                "color": "#9ecfb0",
+                "roughness": 0.6,
+                "metalness": 0
+            }
+        ]
+    }
+]
