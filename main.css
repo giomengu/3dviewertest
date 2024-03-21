@@ -1,3 +1,11 @@
+:root {
+    --main-color: #baad84;
+    --light-color:#f3f3f3;
+    --background-color: #ffffff0a; 
+    --table-background-color: rgb(22, 22, 22);
+    --text-color: rgb(155, 155, 155); /* Text color */
+}
+
 body, html {
     margin: 0;
     padding: 0;
@@ -50,39 +58,41 @@ body, html {
     }
 }
 /* Styles for the loading spinner container */
+
+
 .loading {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    transform: translate(-50%, -50%);
-    display: flex;
+    z-index: 1000; /* To ensure it stays above other content */
+    position: fixed;
     flex-direction: column;
     align-items: center;
+    display: flex;
+    justify-content: space-evenly; /* Aligns children vertically in the center */
+    height: 100vh; /* Adjust height to viewport */
+    width: 100vw; /* Adjust height to viewport */
+    
     background-color: #ffffff0a; /* Adjust color as needed */
-    z-index: 1000; /* To ensure it stays above other content */
+    
     backdrop-filter: blur(10px); /* Blur effect */
     -webkit-backdrop-filter: blur(10px); /* For Safari */
 }
+
 .loading.off {
     animation: fadeAway 2s forwards; /* 10-second animation to hide */
     z-index: -1;
+    
 }
 
 /* Styles for the loading spinner itself */
 #loading-spinner {
-    border: 6px solid #f3f3f3; /* Light grey border */
-    border-top: 6px solid #baad84; /* Blue color for the spinning part */
+    border: 6px solid var(--light-color); /* Light grey border */
+    border-top: 6px solid var(--main-color); /* Blue color for the spinning part */
     border-radius: 50%;
     width: 60px;
     height: 60px;
     animation: spin 2s linear infinite;
-    margin-bottom: 20%;
 }
 
 .logoload{
-    flex-grow: 1;
     width: 50%;
 }
 
@@ -98,7 +108,7 @@ body, html {
     width: 30%; /* Adjust as needed */
     height: 100vh; /* Adjust height to viewport */
     clip-path: polygon(0 0, 90% 0%,90% 40%,calc(90% + 50px) 42%, calc(90% + 50px) 58%, 90% 60%, 90% 100%,0 100%);
-    background-color: #ffffff0a; /* Adjust color as needed */
+    background-color: var(--background-color); /* Adjust color as needed */
     z-index: 1000; /* To ensure it stays above other content */
     backdrop-filter: blur(10px); /* Blur effect */
     -webkit-backdrop-filter: blur(10px); /* For Safari */
@@ -113,7 +123,7 @@ body, html {
     justify-content: center; /* Aligns children vertically in the center */
     align-items: center; /* Centers children horizontally */
     height: 200px; /* Adjust height to viewport */
-    background-color: #ffffff00; /* Adjust color as needed */
+    background-color: var(--background-color); /* Adjust color as needed */
     z-index: 1000; /* To ensure it stays above other content */
     display: flex;
     justify-content: center;
@@ -130,12 +140,12 @@ body, html {
 table {
     width: 80%;
     border-collapse: collapse;
-    background-color: rgb(22, 22, 22); /* Set table background color */
+    background-color: var(--table-background-color);
     border-radius: 10px; /* Rounded corners for the table */
     overflow: hidden; /* Ensures the rounded corners are visible */
     box-shadow: 0 0 10px rgba(43, 43, 43, 0.5); /* Optional: Adds shadow for depth */
     margin-bottom: 20px; /* Space below the table */
-    color: #a09f9d; /* Set text color to white */
+    color: var(--text-color);
     font-weight: lighter;
 }
 
@@ -148,7 +158,7 @@ table, th, td {
 
 table th[colspan="3"] {
     text-align: center;
-    color: #baad84;
+    color: var(--main-color);
     padding: 10px;
     font-size: 1.2em;
     
@@ -189,7 +199,7 @@ tbody tr:hover {
     border: none;
     cursor: pointer;
     position: relative;
-    color: #baad84;
+    color: var(--main-color);
 }
 
 .chevron:before, .chevron:after {
@@ -226,7 +236,7 @@ tbody tr:hover {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     align-items: stretch; 
-    color: rgb(155, 155, 155); /* Text color */
+    color: var(--text-color);
 }
 #material-selector-container.on {
     animation: fadeIn 3s forwards;
@@ -253,7 +263,7 @@ tbody tr:hover {
     height: 20px;
     border-radius: 50%;
     margin-left: 5px; /* Add space between circles */
-    border: 1px solid #a5a5a5;
+    border: 1px solid var(--text-color);
     cursor: pointer;
 
 }
