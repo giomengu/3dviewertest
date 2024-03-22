@@ -282,7 +282,6 @@ tbody tr:hover {
         left: 10px;
     }
     .logoload{
-        flex-grow: 1;
         width: 100%;
     }
     
